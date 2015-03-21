@@ -1,0 +1,35 @@
+<HTML>
+   <HEAD>
+   </HEAD>
+   <SCRIPT LANGUAGE="JavaScript1.1">
+   function parseCommandLine() {
+	if (location.href.indexOf("?") == -1) {
+		document.write("<FRAME src=\"Data/thumbs.htm?0,0\">")
+		return 0
+	}
+	
+	// Parse any command line arguments
+	urlQuery = location.href.split("?")
+	
+	urlTerms = urlQuery[1].split(",")
+	if (urlTerms[0] != null) {
+		index = parseInt(urlTerms[0])
+	}
+
+	if (urlTerms[1] != null) {
+		playing = parseInt(urlTerms[1])
+	}
+	
+	document.write("<FRAME src=\"Data/thumbs.htm?" + index + "," + playing + "\">")
+   }
+  
+   document.write("<FRAMESET frameborder=\"no\" border=\"0\">")
+   parseCommandLine()
+   document.write("<NOFRAMES>")
+   document.write("<BODY>")
+            document.write("Viewing this page requires a browser capable of displaying frames.")
+         document.write("</BODY>")
+      document.write("</NOFRAMES>")
+   document.write("</FRAMESET>")
+   </SCRIPT>
+</HTML>
