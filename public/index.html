@@ -1,0 +1,159 @@
+<!DOCTYPE HTML>
+<!--
+  Telephasic by HTML5 UP
+  html5up.net | @n33co
+  Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+  <head>
+    <title>Relacje z podróży małych i dużych</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="relacje z podróży Meksyk, Nowa Zelandia, Portugalia, Seszele, Toskania, Bałtyki" />
+    <meta name="keywords" content="podróż, Meksyk, Nowa Zelandia, Portugalia, Seszele, Toskania, Bałtyki" />
+    <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.dropotron.min.js"></script>
+    <script src="js/skel.min.js"></script>
+    <script src="js/skel-layers.min.js"></script>
+    <script src="js/init.js"></script>
+    <script src="http://cdn.amcharts.com/lib/3/ammap.js" type="text/javascript"></script>
+    <script src="http://cdn.amcharts.com/lib/3/maps/js/worldHigh.js" type="text/javascript"></script>
+    <script src="http://cdn.amcharts.com/lib/3/themes/dark.js" type="text/javascript"></script>
+    <noscript>
+      <link rel="stylesheet" href="css/skel.css" />
+      <link rel="stylesheet" href="css/style.css" />
+    </noscript>
+    <!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+  </head>
+  <body class="homepage">
+
+    <!-- Header -->
+      <div id="header-wrapper">
+        <div id="header" class="container">
+          <!-- Nav -->
+            <nav id="nav">
+              <ul>
+                <li><a href="/">Start</a></li>
+                <li>
+                  <a href="#">Europa</a>
+                  <ul>
+                    <li><a href="/toskania">Toskania'05</a></li>
+                    <li><a href="/portugalia">Portugalia'06</a></li>
+                    <li><a href="/baltyki">Bałtyki'07</a></li>
+                    <li><a href="/paneuropa">Paneuropa'08</a></li>
+                    <li><a href="/islandia">Islandia'09</a></li>
+                    <li><a href="/spitsbergen">Spitsbergen'09</a></li>
+                    <li><a href="/lanzarote">Lanzarote'11</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">Afryka</a>
+                  <ul>
+                    <li><a href="/rpa">RPA'09</a></li>
+                    <li><a href="/seszele">Seszele'06</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">Ameryka</a>
+                  <ul>
+                    <li><a href="/meksyki">Meksyk'05</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">Australia i Oceania</a>
+                  <ul>
+                    <li><a href="/nowazelandia">Nowa Zelandia'03</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">Azja</a>
+                  <ul>
+                    <li><a href="/dubaj">Dubaj'10</a></li>
+                    <li><a href="/chiny">Chiny'11</a></li>
+                    <li><a href="/japonia">Japonia'11</a></li>
+                    <li><a href="/singapur">Singapur &amp; Malezja'12</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+
+        </div>
+      </div>
+
+      <div class="wrapper">
+        <div class="container">
+          <header class="major">
+            <h2>Odwiedzone kraje</h2>
+          </header>
+          <div id="mapdiv" style="width: 100%; height: 750px;"></div>
+        </div>
+      </div>
+
+    <!-- Promo -->
+      <div id="promo-wrapper">
+        <section id="promo">
+          <h2>Ostatnio odwiedziłam</h2>
+          <a href="/singapur" class="button">Singapur &amp; Malezja</a>
+        </section>
+      </div>
+
+    <!-- Footer -->
+      <div id="footer-wrapper">
+        <div id="copyright" class="container">
+          <ul class="menu">
+            <li>&copy; Barbara Łoboda. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <script type="text/javascript">
+        var map = AmCharts.makeChart("mapdiv",{
+          type: "map",
+          theme: "dark",
+          pathToImages : "http://cdn.amcharts.com/lib/3/images/",
+          panEventsEnabled : true,
+          backgroundColor : "#6699ff",
+          backgroundAlpha : 1,
+          zoomControl: {
+            panControlEnabled : true,
+            zoomControlEnabled : true
+          },
+          dataProvider : {
+            map : "worldHigh",
+            getAreasFromMap : true,
+            areas : [
+              { "id": "CZ", "showAsSelected": true },
+              { "id": "DE", "showAsSelected": true },
+              { "id": "EE", "showAsSelected": true },
+              { "id": "ES", "showAsSelected": true },
+              { "id": "FR", "showAsSelected": true },
+              { "id": "IS", "showAsSelected": true },
+              { "id": "IT", "showAsSelected": true },
+              { "id": "LT", "showAsSelected": true },
+              { "id": "LV", "showAsSelected": true },
+              { "id": "NO", "showAsSelected": true },
+              { "id": "PT", "showAsSelected": true },
+              { "id": "MX", "showAsSelected": true },
+              { "id": "ZA", "showAsSelected": true },
+              { "id": "SC", "showAsSelected": true },
+              { "id": "AE", "showAsSelected": true },
+              { "id": "CN", "showAsSelected": true },
+              { "id": "JP", "showAsSelected": true },
+              { "id": "MY", "showAsSelected": true },
+              { "id": "SG", "showAsSelected": true },
+              { "id": "NZ", "showAsSelected": true }
+          ]
+          },
+          areasSettings : {
+            autoZoom : true,
+            color : "#ffffff",
+            colorSolid : "#6699ff",
+            selectedColor : "#000000",
+            outlineColor : "#666666",
+            rollOverColor : "#9EC2F7",
+            rollOverOutlineColor : "#000000"
+          }
+        });
+      </script>
+  </body>
+</html>
